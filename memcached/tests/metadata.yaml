@@ -1,0 +1,13 @@
+# for more info see: https://github.com/fedora-modularity/meta-test-family/blob/devel/mtf/metadata/README.md
+# metadata document with comments: https://github.com/fedora-modularity/meta-test-family/blob/devel/mtf/metadata/examples/general-component/tests/metadata.yaml
+document: test-metadata
+subtype: general
+download_urls:
+    sanity.py: "https://raw.githubusercontent.com/container-images/memcached/master/tests/sanity1.py"
+enable_lint: True
+import_tests:
+    - "sanity.py"
+    - "generated.py"
+tag_filters:
+    - docker,sanity
+    - optional
